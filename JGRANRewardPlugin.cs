@@ -8,6 +8,7 @@ using System.Reflection;
 using System.Xml.Serialization;
 using System.IO;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 
 namespace JGRAN_Plugin
 {
@@ -78,7 +79,7 @@ namespace JGRAN_Plugin
                 {
                     await Task.Delay(config.interval);
                     //Console.WriteLine($"{online.Count} Online Players...");
-                    //TShock.Utils.Broadcast("Giving random Item to online players. Let's Go!", Color.Green);
+                    TShock.Utils.Broadcast("Giving random Item to online players. Let's Go!", Color.Green);
                     foreach (int index in online)
                     {
                         player = new TSPlayer(index);
@@ -123,13 +124,27 @@ namespace JGRAN_Plugin
                             temp_items.Add(item_id);
                             config.items = temp_items.ToArray();
                             saveConfig();
-                            Console.WriteLine($"Item {iteminfo.Name} successfully added!");
                             args.Player.SendSuccessMessage($"Item {iteminfo.Name} successfully added!");
+                            //Console.WriteLine($"Item {iteminfo.Name} successfully added!");
                         }
                         else
                             args.Player.SendErrorMessage("Item Not Found!");
                     }else
                         args.Player.SendErrorMessage("Invalid Item ID!");
+                    break;
+                case "remove":
+                    break;
+                case "interval":
+                    int interval;
+                    if (Int32.TryParse(args.Parameters[1], out interval))
+                    {
+                        config.interval = interval;
+                        saveConfig();
+                        args.Player.SendSuccessMessage($"Interval has been set to {interval}!");
+                        //Console.WriteLine($"Interval has been set to {interval}!");
+                    }
+                    else
+                        args.Player.SendErrorMessage("Please input a number");
                     break;
             }
         }
