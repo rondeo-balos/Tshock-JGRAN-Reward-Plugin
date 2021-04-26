@@ -103,15 +103,16 @@ namespace JGRAN_Plugin
 
         void rewardCommand(CommandArgs args)
         {
-            if (args.Parameters.Count < 2)
-            {
-                args.Player.SendErrorMessage("Invalid Command!");
-                return;
-            }
+            
             var token = args.Parameters[0];
             switch (token)
             {
                 case "add":
+                    if (args.Parameters.Count < 2)
+                    {
+                        args.Player.SendErrorMessage("Invalid Command!");
+                        break;
+                    }
                     int item_id;
                     if (Int32.TryParse(args.Parameters[1], out item_id))
                     {
@@ -133,8 +134,38 @@ namespace JGRAN_Plugin
                         args.Player.SendErrorMessage("Invalid Item ID!");
                     break;
                 case "remove":
+                    if (args.Parameters.Count < 2)
+                    {
+                        args.Player.SendErrorMessage("Invalid Command!");
+                        break;
+                    }
+                    int item_remove;
+                    if (Int32.TryParse(args.Parameters[1], out item_remove))
+                    {
+                        Item iteminfo = TShock.Utils.GetItemById(item_remove);
+                        if (iteminfo != null)
+                        {
+                            List<int> temp_items = new List<int>();
+                            for (int i = 0; i < config.items.Length; i++)
+                                temp_items.Add(config.items[i]);
+                            temp_items.Remove(item_remove);
+                            config.items = temp_items.ToArray();
+                            saveConfig();
+                            args.Player.SendSuccessMessage($"Item {iteminfo.Name} successfully removed!");
+                            //Console.WriteLine($"Item {iteminfo.Name} successfully added!");
+                        }
+                        else
+                            args.Player.SendErrorMessage("Item Not Found!");
+                    }
+                    else
+                        args.Player.SendErrorMessage("Invalid Item ID!");
                     break;
                 case "interval":
+                    if (args.Parameters.Count < 2)
+                    {
+                        args.Player.SendErrorMessage("Invalid Command!");
+                        break;
+                    }
                     int interval;
                     if (Int32.TryParse(args.Parameters[1], out interval))
                     {
@@ -146,6 +177,15 @@ namespace JGRAN_Plugin
                     else
                         args.Player.SendErrorMessage("Please input a number");
                     break;
+                case "list":
+                    if (args.Parameters.Count < 1)
+                    {
+                        args.Player.SendErrorMessage("Invalid Command!");
+                        break;
+                    }
+                    Console.WriteLine(String.Join(",", config.items));
+                    break;
+
             }
         }
 
