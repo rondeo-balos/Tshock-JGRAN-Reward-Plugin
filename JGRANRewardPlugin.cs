@@ -102,17 +102,17 @@ namespace JGRAN_Plugin
 
         void rewardCommand(CommandArgs args)
         {
-            if (args.Parameters.Count < 3)
+            if (args.Parameters.Count < 2)
             {
                 args.Player.SendErrorMessage("Invalid Command!");
                 return;
             }
-            var token = args.Parameters[1];
+            var token = args.Parameters[0];
             switch (token)
             {
                 case "add":
                     int item_id;
-                    if (Int32.TryParse(args.Parameters[2], out item_id))
+                    if (Int32.TryParse(args.Parameters[1], out item_id))
                     {
                         Item iteminfo = TShock.Utils.GetItemById(item_id);
                         if ( iteminfo != null)
