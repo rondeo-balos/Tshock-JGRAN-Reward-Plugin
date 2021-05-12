@@ -10,17 +10,17 @@ using System.IO;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace JGRAN_Plugin
+namespace JGRAN_Reward_Plugin
 {
     [ApiVersion(2, 1)]
-    public class JGRAN_Plugin : TerrariaPlugin
+    public class JGRAN_Reward_Plugin : TerrariaPlugin
     {
         public override string Author => "Rondeo Balos";
         public override string Description => "A random giveaway reward plugin";
         public override string Name => "JGRAN Reward Plugin";
         public override Version Version => Assembly.GetExecutingAssembly().GetName().Version;
 
-        public JGRAN_Plugin(Main game) : base(game) { }
+        public JGRAN_Reward_Plugin(Main game) : base(game) { }
 
         public override void Initialize()
         {

@@ -1,20 +1,5 @@
 E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\JGRAN Reward Plugin.dll
 E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\JGRAN Reward Plugin.pdb
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\Newtonsoft.Json.dll
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\HttpServer.dll
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\MySql.Data.dll
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\BCrypt.Net.dll
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\Mono.Data.Sqlite.dll
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\OTAPI.pdb
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\TerrariaServer.pdb
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\TShockAPI.pdb
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\TShockAPI.xml
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\TShockAPI.dll.config
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\Newtonsoft.Json.xml
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\HttpServer.pdb
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\HttpServer.xml
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\bin\Debug\BCrypt.Net.xml
-E:\JGRAN Reward Plugin\JGRAN Reward Plugin\obj\Debug\JGRAN Reward Plugin.csprojAssemblyReference.cache
 E:\JGRAN Reward Plugin\JGRAN Reward Plugin\obj\Debug\JGRAN Reward Plugin.csproj.CoreCompileInputs.cache
 E:\JGRAN Reward Plugin\JGRAN Reward Plugin\obj\Debug\JGRAN Reward Plugin.csproj.CopyComplete
 E:\JGRAN Reward Plugin\JGRAN Reward Plugin\obj\Debug\JGRAN Reward Plugin.dll

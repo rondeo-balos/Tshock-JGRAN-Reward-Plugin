@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace JGRAN_Plugin
+namespace JGRAN_Reward_Plugin
 {
     public class Config
     {
